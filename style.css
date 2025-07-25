@@ -66,7 +66,7 @@ p {
 
 .secondary-btn:hover {
    /* background-color: #5a6268; /* Slightly darker gray */
-   background-color: #E95A08;
+   background-color: #d14972;
 }
 
 /* Navbar */
@@ -411,6 +411,7 @@ p {
 
 .input-group button {
     border-radius: 0 5px 5px 0;
+    background-color: #E95A08;
 }
 
 
@@ -609,11 +610,6 @@ p {
 
 /* Mobile Responsiveness */
 @media (max-width: 576px) {
-    /* General adjustments for mobile */
-    .container {
-        padding: 0 15px; /* Reduce padding on very small screens for better use of space */
-    }
-
     .navbar .nav-links {
         display: none;
         flex-direction: column;
@@ -663,18 +659,11 @@ p {
     }
 
     .banner-content h1 {
-        font-size: 32px; /* Adjusted font size for smaller mobile screens */
-    }
-    .banner-content p {
-        font-size: 16px; /* Adjusted font size for smaller mobile screens */
+        font-size: 36px;
     }
 
     .plants-section .plant-cards {
-        grid-template-columns: 1fr; /* Display Cards in 1 Column for mobile */
-    }
-    .plant-card img {
-        margin-left: auto; /* Center image when in single column */
-        margin-right: auto; /* Center image when in single column */
+        grid-template-columns: repeat(2, 1fr); /* Display Cards in 2 Columns */
     }
 
     .plants-lover-section .container {
@@ -688,33 +677,15 @@ p {
     }
 
     .plants-lover-content h2 {
-        font-size: 28px; /* Adjusted font size for smaller mobile screens */
-        margin-left: 0; /* Center content */
-    }
-    .plants-lover-content p {
-        margin-left: 0; /* Center content */
+        font-size: 32px;
     }
 
     .plants-lover-image img {
-        max-width: 90%; /* Adjusted size for smaller mobile screens */
+        max-width: 80%; /* Adjust size for mobile if needed */
     }
 
     .trusted-badge {
         display: none; /* Hide trusted badge in mobile device */
-    }
-
-    /* Input group for newsletter section */
-    .input-group {
-        flex-direction: column; /* Stack input and button vertically */
-        margin-left: 20px; /* Reduce horizontal margin */
-        margin-right: 20px; /* Reduce horizontal margin */
-    }
-    .input-group input[type="email"] {
-        border-radius: 5px; /* Apply full border-radius when stacked */
-        margin-bottom: 10px; /* Add space between input and button */
-    }
-    .input-group button {
-        border-radius: 5px; /* Apply full border-radius when stacked */
     }
 
     .image-grid {
@@ -765,25 +736,6 @@ p {
 
     .social-icons {
         margin-top: 20px;
-        justify-content: center; /* Ensure social icons are centered */
-    }
-
-    /* Product Feature Section with Badge (from prior full CSS, integrated here) */
-    .product-feature-section .feature-image-area img {
-        height: 280px; /* Further adjust image height for mobile */
-    }
-
-    .product-feature-section .feature-text-area h2 {
-        font-size: 28px;
-    }
-
-    .product-feature-section .feature-text-area p {
-        font-size: 16px;
-    }
-
-    .product-feature-section .key-features-row {
-        flex-direction: column; /* Stack key features vertically on very small screens */
-        align-items: center; /* Center stacked key features */
     }
 }
 
@@ -791,8 +743,4 @@ p {
     .plants-section .plant-cards {
         grid-template-columns: 1fr; /* Single column on very small screens */
     }
-    /* No additional changes explicitly required for 480px beyond what's inherited
-       from 576px, as the 576px rules adequately handle single column layouts
-       and basic font/spacing adjustments for most components.
-    */
 }
