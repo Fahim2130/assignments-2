@@ -1,0 +1,745 @@
+/* General Styles */
+:root {
+    --primary-color: #e55d87; /* A shade of pink/red for buttons and highlights */
+    --secondary-color: #6c757d; /* A dark gray for text */
+    --light-bg: #f8f9fa; /* Light background for sections */
+    --dark-bg: #343a40; /* Dark background for footer */
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --border-color: #dee2e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--light-bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    font-size: 16px;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.primary-btn:hover {
+    background-color: #d14972; /* Slightly darker pink */
+}
+
+.secondary-btn {
+    background-color: #E95A08;
+;
+    color: var(--text-light);
+}
+
+.secondary-btn:hover {
+   /* background-color: #5a6268; /* Slightly darker gray */
+   background-color: #E95A08;
+}
+
+/* Navbar */
+.navbar {
+    /*background-color: var(--text-light); */
+    background-color: var(--light-bg);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 30px;
+}
+
+.navbar .nav-links a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.navbar .cart-icon {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .cart-icon i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.navbar .cart-icon .cart-text {
+    display: inline; /* Initially visible for desktop */
+}
+
+.hamburger-menu {
+    display: none; /* Hidden on desktop */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Banner Section */
+.banner {
+    /*background-color: #fff0f5; /* Light pink background */
+    
+    padding: 80px 0;
+    text-align: center;
+}
+
+.banner .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.banner-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.text-primary{
+    color: #E95A08;
+}
+.banner-content h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.banner-content p {
+    font-size: 18px;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+.banner-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Plants Section */
+.plants-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--light-bg);
+    align-items: center;
+}
+
+.plants-section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.plants-section p {
+    font-size: 18px;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+}
+
+.plant-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+ 
+.plant-card {
+    background-color: var(--text-light);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+     
+}
+
+.plant-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    align-items: center;
+     margin-left: 32px;
+    
+     
+}
+
+.plant-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.plant-card .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+/* Plants Lover Section */
+.plants-lover-section {
+    padding: 80px 0;
+    background-color: var(--text-light);
+    background-image: url('flower-store.jpg'); /* Background image from Figma description */
+    background-size: cover;
+    background-position: center;
+    color: var(--text-light); /* Ensure text is readable on the background */
+    text-align: center;
+    position: relative;
+}
+
+
+
+.plants-lover-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+    z-index: 1;
+}
+
+.plants-lover-section .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+}
+
+.plants-lover-content {
+    flex: 1;
+    padding-right: 40px;
+    
+     
+}
+
+.plants-lover-content h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    margin-left: 80px;
+    margin-bottom: 15px;
+    
+}
+
+.plants-lover-content p {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    margin-left: 80px;
+    
+}
+
+.plants-lover-image {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plants-lover-image img {
+    max-width: 540px;
+    height: 597px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.trusted-badge {
+    position: absolute;
+    bottom: 480px; /* Adjust as per Figma */
+   /* right: 20px; /* Adjust as per Figma */
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+     text-transform: uppercase;
+     left: 470px;
+    z-index: 10; /* Ensure it stays on top of the image */
+     
+    /*top: 20px; /* Distance from top */
+   /* right: 20px; /* Distance from right */
+   /* background-color: var(--primary-color); /* Example background for badge */
+    /*border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    /* Optional: Animation for Trusted Plant Lover Badge */
+    /* animation: spin 4s linear infinite; */
+}
+
+.trusted-badge img {
+    max-width: 70%;
+    height: auto;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+ 
+
+.input-group {
+    display: flex;
+    margin-top: 120px;
+    margin-right: 300px;
+    margin-left: 300px;
+    justify-content: center;
+    background-color: white;
+    color:var(--text-dark) ;
+    
+     
+}
+.plants-input{
+    padding: 80px 0;
+    margin-top: 120px;
+    height: 500px;
+    background-color: var(--text-light);
+    background-image: url('assets/news-letter-bg.png'); /* Background image from Figma description */
+    background-size: cover;
+    background-position: center;
+    color: var(--text-light); /* Ensure text is readable on the background */
+    text-align: center;
+    position: relative;
+     
+
+}
+.header{
+    color: white;
+    margin-top: 40px;
+    font-size: xx-large;
+    font-weight: bold;
+    justify-content: center;
+}
+.title{
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 120px;
+
+}
+
+.description{
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+ 
+.input-group input[type="email"] {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-group button {
+    border-radius: 0 5px 5px 0;
+}
+
+
+/* Image Gallery Section */
+.image-gallery-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--light-bg);
+    
+}
+
+.image-gallery-section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.image-gallery-section p {
+    font-size: 18px;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+}
+
+  
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for the first two images */
+     
+    gap: 30px;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden; /* Ensures blur doesn't spill out */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-item img {
+    width: 100%;
+    height: 300px; /* Fixed height for consistency */
+    object-fit: cover;
+    display: block;
+    transition: filter 0.5s ease; /* Smooth transition for blur */
+    filter: brightness(0.7) blur(1.5px); /* Initial blur and darken */
+}
+
+.image-item:hover img {
+    filter: brightness(0.9) blur(0px); /* Less blur and brighter on hover */
+}
+
+.image-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+    color:  white;
+    opacity: 1; /* Always visible */
+    text-align: center;
+    padding: 20px;
+    transition: background-color 0.5s ease;
+}
+
+.image-item:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.2); /* Slightly less dark on hover */
+} 
+
+
+.image-item .overlay h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: var(--text-light);
+}
+
+.image-item .overlay p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+/* For the third image to take full width */
+.image-item.full-width {
+    grid-column: 1 / -1; /* Spans across all columns */
+}
+
+.image-item.full-width img {
+    height: 400px; /* Taller for the full-width image */
+}
+/* Footer Section */
+.footer {
+    background-color: var(--white);
+    color: var(--rgba(0, 0, 0, 0.5));
+    padding: 40px 0;
+}
+
+.footer p{
+    width: 359px;
+    height: 81px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Detailed Links Section */
+.detailed-links-section {
+    /*background-color: var(--dark-bg); /* Use a dark background like the footer */
+    color: var(--text-dark);
+    padding: 60px 0;
+}
+
+.detailed-links-section .links-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns by default */
+    gap: 30px; /* Space between columns */
+}
+
+.detailed-links-section .links-column {
+    padding: 10px;
+}
+
+.detailed-links-section .links-column h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--primary-color); /* Highlight headings with primary color */
+}
+
+.detailed-links-section .links-column ul {
+    list-style: none; /* Remove bullet points */
+}
+
+.detailed-links-section .links-column ul li {
+    margin-bottom: 10px;
+}
+
+.detailed-links-section .links-column ul li a {
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 15px;
+}
+
+.detailed-links-section .links-column ul li a:hover {
+    color: var(--primary-color); /* Change color on hover */
+}
+
+.detailed-links-section .branding-info p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #bbb; /* Lighter text for description */
+}
+
+.detailed-links-section .branding-info .social-icons img {
+    width: 25px; /* Slightly smaller icons for this section */
+    height: 25px;
+    margin-right: 15px; /* Adjust spacing */
+    transition: transform 0.3s ease;
+}
+
+.detailed-links-section .branding-info .social-icons img:hover {
+    transform: translateY(-3px);
+}
+.social-icons{
+    display: flex;
+     
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    transition: transform 0.3s ease;
+     
+}
+
+.social-icons img:hover {
+    transform: translateY(-3px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 576px) {
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--text-light);
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        border-top: 1px solid var(--border-color);
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+    }
+
+    .navbar .nav-links li {
+        margin: 0;
+        border-bottom: 1px solid var(--border-color);
+        text-align: center;
+    }
+
+    .navbar .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .navbar .nav-links a {
+        padding: 15px;
+        display: block;
+    }
+
+    .navbar .hamburger-menu {
+        display: block;
+    }
+
+    .navbar .cart-icon .cart-text {
+        display: inline; /* Keep visible on mobile as per Figma requirement */
+    }
+
+    .banner .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .banner-content h1 {
+        font-size: 36px;
+    }
+
+    .plants-section .plant-cards {
+        grid-template-columns: repeat(2, 1fr); /* Display Cards in 2 Columns */
+    }
+
+    .plants-lover-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .plants-lover-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .plants-lover-content h2 {
+        font-size: 32px;
+    }
+
+    .plants-lover-image img {
+        max-width: 80%; /* Adjust size for mobile if needed */
+    }
+
+    .trusted-badge {
+        display: none; /* Hide trusted badge in mobile device */
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr; /* Single column layout on mobile */
+    }
+
+    .image-item img {
+        height: 250px; /* Adjust height for smaller screens */
+    }
+
+    .image-item.full-width img {
+        height: 300px; /* Adjust height for full-width image on mobile */
+    }
+
+    .image-item .overlay h3 {
+        font-size: 24px;
+    }
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .detailed-links-section .links-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        text-align: center; /* Center content for single column */
+    }
+
+    .detailed-links-section .links-column h3 {
+        margin-bottom: 10px; /* Adjust spacing */
+    }
+
+    .detailed-links-section .links-column ul li {
+        margin-bottom: 5px; /* Reduce space between links */
+    }
+
+    .detailed-links-section .branding-info .social-icons {
+        justify-content: center; /* Center social icons on mobile */
+        display: flex;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .footer-links li {
+        margin: 10px 0;
+    }
+
+    .social-icons {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .plants-section .plant-cards {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+}
